@@ -4,18 +4,16 @@ export default class Team {
   }
 
   add(character) {
-    this.members.forEach((member) => {
-      if (member !== character) {
-        this.members.add(character);
-      } else {
-        throw new Error('Персонаж уже в команде');
-      }
-    });
+    if (this.members.has(character)) {
+      throw new Error('Персонаж уже в команде');
+    } else {
+      this.members.add(character);
+    }
   }
 
   addAll(...characters) {
     characters.forEach((character) => {
-      if (!this.members.includes(character)) {
+      if (!this.members.has(character)) {
         this.members.add(character);
       }
     });
@@ -24,5 +22,6 @@ export default class Team {
   toArray() {
     const newArr = [];
     this.members.forEach((member) => newArr.push(member));
+    return newArr;
   }
 }
