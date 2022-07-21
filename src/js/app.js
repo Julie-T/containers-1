@@ -25,3 +25,17 @@ export default class Team {
     return newArr;
   }
 }
+
+class Character {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const team = new Team();
+const superMan = new Character('John');
+const fireMan = new Character('Mike');
+
+team.add(superMan);
+team.addAll(superMan, fireMan);
+console.log(team.toArray());

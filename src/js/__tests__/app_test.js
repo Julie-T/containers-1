@@ -24,8 +24,9 @@ test('Добавление персонажа в команду повторно
   
     const team = new Team();
     const superMan = new Character('John');
+    team.add(superMan);
 
-    expect(team.add(superMan).add(superMan)).toThrowError(new Error('Персонаж уже в команде'));
+    expect(team.add(superMan)).toThrowError(new Error('Персонаж уже в команде'));
 });
 
 test('Добавление нескольких персонажей в команду', () => {
