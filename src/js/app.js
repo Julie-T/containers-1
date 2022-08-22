@@ -34,10 +34,10 @@ export class Character {
   }
 }
 
-const team = new Team();
-const superMan = new Character('John');
-const fireMan = new Character('Mike');
+// const team = new Team();
+// const superMan = new Character('John');
+// const fireMan = new Character('Mike');
 
-team.add(superMan);
-team.addAll(superMan, fireMan);
-console.log(team.toArray());
+// team.add(superMan);
+// team.addAll(superMan, fireMan);
+// console.log(team.toArray());

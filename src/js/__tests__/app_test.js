@@ -8,7 +8,7 @@ test('Добавление персонажа в команду', () => {
   team.add(superMan);
 
   expect(team.toArray()).toEqual([{
-    "name": "John"
+    name: 'John',
   }]);
 });
 
@@ -28,10 +28,11 @@ test('Добавление нескольких персонажей в кома
 
   expect(team.toArray()).toEqual(
     [{
-      name: 'John'
+      name: 'John',
     }, {
-      name: 'Mike'
-    }]);
+      name: 'Mike',
+    }]
+  );
 });
 
 // test('Добавление нескольких персонажей в команду', () => {
