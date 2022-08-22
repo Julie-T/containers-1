@@ -8,6 +8,7 @@ export default class Team {
       throw new Error('Персонаж уже в команде');
     } else {
       this.members.add(character);
+      return this.members;
     }
   }
 
@@ -16,6 +17,7 @@ export default class Team {
       if (!this.members.has(character)) {
         this.members.add(character);
       }
+      return this.members;
     });
   }
 
@@ -26,7 +28,7 @@ export default class Team {
   }
 }
 
-class Character {
+export class Character {
   constructor(name) {
     this.name = name;
   }
